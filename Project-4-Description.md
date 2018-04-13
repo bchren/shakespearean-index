@@ -22,12 +22,21 @@ JULIET	O Romeo, Romeo! wherefore art thou Romeo?
 
 The fourth line of the output is the line taken from the play's script that contains this instance of the word *wherefore*.
 
-The program should output similar entries for the four other instances of *wherefore* in *Romeo and Juliet*.
+The word *wherefore* occurs in other locations as well (five total times in *Romea and Juliet*) and your program must be able to print
+similarly formatted entries for each unique occurrence.
 
 ## Details
 
 The main challenge of this project is interpereting the spec and making appropriate design decisions. Therefore, you have pretty broad
 freedom to structure your solutions that way you wish, but I'll give you a few tips to get started.
+
+Don't procrastinate! You're going to need some time to think about your design! Ask me if you need clarifications!
+
+Develop incrementally! Start with a small program that does the simplest possible thing: open a file and print its lines, perhaps. Then
+make a small change to get slightly more functionality. Don't write more than 10-20 lines without compiling and testing. You can't write
+a program this complex in one go.
+
+Don't put all your code in one gigantic method.
 
 ### Classes
 
@@ -59,12 +68,15 @@ Use the `Scanner` class to read through a file. I recommend using one `Scanner` 
 second `Scanner` to tokenize the words in each line. Relevant methods are `hasNext`, `next`, `hasNextLine`, and `nextLine`.
 
 Ignore all punctutation other than apostrophes, which you should treat as part of a word. Hint: the `String` class has a `replaceAll`
-method that can be used to remove all characters matching a regular expression.
+method that can be used to remove all characters matching a regular expression. Try using it on a line after you've read it with
+`Scanner`.
+
+**For convenience, you may ignore all words with fewer than four letters**.
 
 ### Indexing
 
 The index should be a `map: string --> list of index entries`. That is, for a given word, the index map should store a list
-of index entry objects containing the information on all the occurences of that word.
+of index entry objects containing the information on all the occurrences of that word.
 
 There are multiple `Map` classes: `TreeMap` and `HashMap` are good options. `ArrayList` or `LinkedList` can be used for the inner
 list.
