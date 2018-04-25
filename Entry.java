@@ -11,7 +11,7 @@ public class Entry {
     public Entry() {
             play = "";
             actScene = "";
-            character = "Character";
+            character = "";
             line = "";
     }
     

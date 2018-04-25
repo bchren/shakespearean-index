@@ -63,9 +63,8 @@ public class SearchEngine {
         }
         return map;
     }
-    
-    
-    
+
+
     public void printIndices(HashMap<String, ArrayList<Entry>> map, String key) {
         
         ArrayList<Entry> list = new ArrayList<Entry>();

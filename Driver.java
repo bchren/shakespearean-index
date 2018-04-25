@@ -8,8 +8,7 @@ public class Driver {
         String[] files = {"texts/a_midsummer_nights_dream.txt", "texts/macbeth.txt", "texts/romeo_and_juliet.txt"};
         HashMap<String, ArrayList<Entry>> map = new HashMap<>();
         Scanner scan = new Scanner(System.in);
-        
-        //Creating the index
+    
         for(int i = 0; i < 3; i++) {
             map = se.createIndex(map, files[i]);
         }
@@ -17,6 +16,7 @@ public class Driver {
         System.out.println("Welcome to the Shakespearean Index. Please enter a word you wish to look up.");
         
         String word = scan.next();
+        
         if(!map.containsKey(word)) {
             System.out.println("That word does not appear in any of the plays.");
         } else {
